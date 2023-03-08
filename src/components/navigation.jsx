@@ -1,4 +1,5 @@
 import React from "react";
+import logo from "../img/njfp4.png"
 
 export const Navigation = (props) => {
   return (
@@ -11,21 +12,19 @@ export const Navigation = (props) => {
             data-toggle="collapse"
             data-target="#bs-example-navbar-collapse-1"
           >
-            {" "}
             <span className="sr-only">Toggle navigation</span>{" "}
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
             <span className="icon-bar"></span>{" "}
           </button>
-          <a className="navbar-brand page-scroll" href="#page-top">
-            React Landing Page
-          </a>{" "}
+          <div  style={{ display: "flex", alignItems: "center" }}>
+            <img src={logo} alt="NJFP logo" height="50" />
+            <a className="navbar-brand page-scroll" href="#page-top">
+            <span></span>
+            </a>
+          </div>
         </div>
-
-        <div
-          className="collapse navbar-collapse"
-          id="bs-example-navbar-collapse-1"
-        >
+        <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
             <li>
               <a href="#features" className="page-scroll">
