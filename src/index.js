@@ -7,14 +7,11 @@ import * as serviceWorker from './serviceWorker';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.render(  
-     <BrowserRouter>
-      <Routes>
-        <Route path="/products" element={<Products />} />
-        <Route path="/contact" element={<App />} />
-        <Route path="/" element={<App />} />
-        <Route path="/*" element={<App />} />
-      </Routes>
-    </BrowserRouter>,
+  <React.StrictMode>
+  <BrowserRouter>
+    <App />
+  </BrowserRouter>
+</React.StrictMode>,
   document.getElementById('root')
 );
 

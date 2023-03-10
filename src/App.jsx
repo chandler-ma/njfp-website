@@ -9,6 +9,9 @@ import { Contact } from "./components/contact";
 import JsonData from "./data/data.json";
 import SmoothScroll from "smooth-scroll";
 import "./App.css";
+import { Products } from "./components/Products";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./components/home"
 
 export const scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000,
@@ -16,21 +19,14 @@ export const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 const App = () => {
-  const [landingPageData, setLandingPageData] = useState({});
-  useEffect(() => {
-    setLandingPageData(JsonData);
-  }, []);
-
   return (
-    <div>
+    <>
       <Navigation />
-      <Header data={landingPageData.Header} />
-      <Features data={landingPageData.Features} />
-      <About data={landingPageData.About} />
-      <Services data={landingPageData.Services} />
-      <Gallery data={landingPageData.Gallery} />
-      <Contact data={landingPageData.Contact} />
-    </div>
+      <Routes>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/products" element={<Products />}></Route>
+      </Routes>
+    </>
   );
 };
 
