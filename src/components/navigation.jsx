@@ -19,7 +19,7 @@ export const Navigation = (props) => {
           </button>
           <div  style={{ display: "flex", alignItems: "center" }}>
             <img src={logo} alt="NJFP logo" height="50" />
-            <a className="navbar-brand page-scroll" href="#page-top">
+            <a className="navbar-brand page-scroll" href="/">
             <span></span>
             </a>
           </div>
@@ -37,8 +37,8 @@ export const Navigation = (props) => {
               </a>
             </li>
             <li>
-              <a href="#services" className="page-scroll">
-                Services
+              <a href="/products"> 
+                Products
               </a>
             </li>
             <li>
